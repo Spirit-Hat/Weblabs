@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    [data-color]::after {
+        content: attr(data-color);
+        background-color:blue;
+        color: white;
+    }
+</style>
+<body>
+<h1>Teacher Card</h1>
+<hr>
+<div class="Image">
+    <a href="2.jpg">
+        <img src="2.jpg" width="400" height="400">
+    </a>
+    <hr>
+    <article >
+        <label><b>First Name:</b></label><br>
+        <p id="FirstName">Michael</p>
+
+        <label><b>Last Name</b></label><br>
+        <p id="LastName">Artin</p>
+
+        <label><b>Gender</b></label><br>
+        <p id="Gender">Men</p>
+
+        <label><b>Birthday</b></label><br>
+        <p id="Birthday">02.01.1974</p>
+
+        <label><b>Email</b></label><br>
+        <p id="Email">Test@email.com</p>
+
+        <label><b>Phone</b></label><br>
+        <p id="Tel">+1234567890</p>
+
+        <label><b>Color</b></label><br>
+        <p data-color="blue"></p>
+
+        <label><b>Country:</b></label><br>
+        <p id="Country">Australia</p>
+
+        <label><b>City:</b></label><br>
+        <p id="City">Melbourne</p>
+
+        <label><b>Message:</b></label><br>
+        <p id="Message">Some message</p>
+
+
+    </article>
+</div>
+</body>
+</html>
