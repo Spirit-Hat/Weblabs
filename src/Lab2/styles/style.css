@@ -132,53 +132,63 @@ nav ul {
     font-size: 20px;
 
 }
-.popup-content form input,select {
+
+.popup-content form input, select {
     border: 1px solid;
     padding: 8px;
     font-size: 18px;
     width: 100%;
 }
-.popup-content form div,label {
+
+.popup-content form div, label {
     margin-top: 10px;
 }
+
 .popup-content form .sheet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: row;
 }
+
 .popup-content form .sheet > div {
     width: 45%;
 }
+
 .popup-content form .sex input {
     width: 14px;
     margin-right: 20px;
 
 }
+
 .popup-content form input[type=color] {
     padding: 0;
     width: 10%;
 }
-.popup-content form textarea{
+
+.popup-content form textarea {
     resize: none;
     padding: 8px;
     font-size: 18px;
     width: 100%;
     height: 80px;
 }
+
 .popup-content form input[type=submit] {
     font-size: 24px;
     border: 1px solid #ff6600;
     background-color: white;
     color: #ff6600;
 }
-.popup-content .popupHeader H1{
+
+.popup-content .popupHeader H1 {
     display: flex;
     justify-content: space-between;
 }
-.popup-content .popupHeader H1 div:hover{
-cursor: pointer;
-    color:#ff6600;
+
+.popup-content .popupHeader H1 div:hover {
+    cursor: pointer;
+    color: #ff6600;
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
