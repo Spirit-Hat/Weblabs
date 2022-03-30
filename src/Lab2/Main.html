@@ -20,7 +20,7 @@
         <h1>Teachinder</h1>
     </div>
     <div class="search">
-        <input type="text" placeholder="Enter First Name"  required autocomplete="off">
+        <input type="text" placeholder="Enter First Name" required autocomplete="off">
         <a href="" class="search-btn">Search</a>
     </div>
 
@@ -43,56 +43,76 @@
 
 <div class="TeacherPopup" id="myForm">
     <div class="popupBody">
-        <form>
-            <h1>Register form </h1>
-            <hr>
-            <label for="FirstName"><b>Enter First Name</b></label><br>
-            <input type="text" placeholder="Enter First Name"  id="FirstName" required autocomplete="off">
-            <br>
-            <label for="LastName"><b>Enter Last Name</b></label><br>
-            <input type="text" placeholder="Enter Last Name"  id="LastName" required autocomplete="off">
-            <br>
+        <div class="popup-content">
+            <div class="popupHeader">
+                <h1>Add teacher
+                    <div onclick="closeForm()">&#215;</div>
+                </h1>
+            </div>
+            <form>
+                <div>
+                    <label for="FirstName">Name</label><br>
+                    <input type="text" placeholder="Enter First Name" id="FirstName" required autocomplete="off">
+                </div>
+                <div>
+                    <label for="spec">Speciality</label><br>
+                    <select id="spec">
+                        <option value="math">Math</option>
+                        <option value="art">Art</option>
+                        <option value="literature">Literature</option>
+                        <option value="dataScience">Data Science</option>
+                        <option value="history">History</option>
+                        <option value="psychology">Psychology</option>
+                        <option value="biology">Biology</option>
+                        <option value="physics">Physics</option>
+                    </select>
+                </div>
+                <div class="sheet">
+                    <div>
+                        <label for="fcountry">Country:</label><br>
+                        <input type="text" id="fcountry" name="fcountry"><br>
+                    </div>
 
-            <input type="radio" id="men" name="gender"value="Men">
-            <label for="men">Men</label>
-            <input type="radio" id="women" name="gender" value="women">
-            <label for="women">Women</label><br>
+                    <div>
+                        <label for="fcity">City:</label><br>
+                        <input type="text" id="fcity" name="fcity"><br>
+                    </div>
+                    <div>
+                        <label for="email">Email</label><br>
+                        <input type="text" placeholder="Enter Email" id="email" required autocomplete="off"><br>
+                    </div>
+                    <div>
+                        <label for="phone">Phone</label><br>
+                        <input type="tel" id="phone" required autocomplete="off"><br>
+                    </div>
+                </div>
+                <div>
+                    <label for="birthday">Date of birthday</label><br>
+                    <input type="date" id="birthday" required autocomplete="off"><br>
+                </div>
+                <div class="sex">
+                    <label>Gender</label><br>
+                    <label for="men">Men</label>
+                    <input type="radio" id="men" name="gender" value="Men">
+                    <label for="women">Women</label>
+                    <input type="radio" id="women" name="gender" value="women">
+                </div>
 
-            <label for="birthday"><b>Date of birthday</b></label><br>
-            <input type="date" id="birthday" required autocomplete="off"><br>
+                <div>
+                    <label for="color">Background color</label><br>
+                    <input type="color" id="color" value="#f6b73c">
+                </div>
 
-
-            <label for="email"><b>Email</b></label><br>
-            <input type="text" placeholder="Enter Email" id="email" required autocomplete="off"><br>
-
-            <label for="phone"><b>Phone</b></label><br>
-            <input type="tel" id="phone" required autocomplete="off"><br>
-
-            <label for="color"><b>Chose color</b></label><br>
-            <input list="color">
-            <datalist id="color">
-                <option value="red">
-                <option value="blue">
-                <option value="grey">
-                <option value="purple">
-                <option value="orange">
-            </datalist><br>
-
-            <label for="fcountry">Country:</label><br>
-            <input type="text" id="fcountry" name="fcountry"><br>
-
-            <label for="fcity">City:</label><br>
-            <input type="text" id="fcity" name="fcity"><br>
-
-            <label for="fmessage">Message:</label><br>
-            <textarea name="message" id="fmessage" rows="10" cols="10"></textarea>
-            <br><br>
-
-            <button>Register </button>
-        </form>
+                <div>
+                    <label for="fmessage">Notes (optional):</label><br>
+                    <textarea name="message" id="fmessage" rows="10" cols="10"></textarea>
+                    <br><br>
+                </div>
+                <input type="submit" value="Add">
+            </form>
+        </div>
     </div>
 </div>
-
 
 
 </body>
