@@ -19,15 +19,19 @@ a:visited {
 body {
     margin-right: 10%;
     margin-left: 10%;
-    margin-top: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header {
+    margin: 0px 20px ;
+    padding-top: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     height: 40px;
+    font-size: 24px;
+
 }
 
 .logo {
@@ -36,18 +40,19 @@ header {
 
 .search {
     align-items: flex-end;
-    font-size: 3vmin;
+    /*font-size: 3vmin;*/
 }
 
 .search input {
-    height: 40px;
-
+    height: 43px;
+    width: 250px;
+    padding-left:20px;
+    margin-right: 20px;
 }
 
 .search-btn {
-    font-size: 13px;
+    font-size: 16px;
     border: 1px solid;
-    /*padding: 12px 20px 12px ;*/
     padding: 12px 20px 12px 10px;
 }
 
@@ -78,7 +83,9 @@ nav ul {
 }
 
 .addTeacher {
-    font-size: 13px;
+    margin: 0px 20px ;
+    width: 15%;
+    font-size: 16px;
     border: 1px solid;
     /*padding: 12px 20px 12px ;*/
     padding: 12px 20px 12px 10px;
@@ -91,14 +98,7 @@ nav ul {
     background-color: rgba(0, 0, 0, 0.78);
     top: 0;
     left: 0;
-
-    /*display: none;*/
-
-    /*position: fixed;*/
-    /*bottom: 100px;*/
-    /*right: 15px;*/
-    /*border: 3px solid #f1f1f1;*/
-    /*z-index: 9;*/
+    display: none;
 }
 
 .popupBody {
