@@ -52,8 +52,11 @@ header {
 
 .search-btn {
     font-size: 16px;
-    border: 1px solid;
     padding: 12px 20px 12px 10px;
+
+    border: 1px solid #ff6600;
+    background-color: white;
+    color: #ff6600;
 }
 
 nav {
@@ -76,7 +79,7 @@ nav ul {
 }
 
 .navigation ul li a {
-    color: black;
+    color: #ff6600;
     font-size: 3vmin;
     margin: 0px 10px;
     transition: 0.5s ease;
@@ -86,9 +89,12 @@ nav ul {
     margin: 0px 20px ;
     width: 15%;
     font-size: 16px;
-    border: 1px solid;
     /*padding: 12px 20px 12px ;*/
     padding: 12px 20px 12px 10px;
+
+    border: 1px solid #ff6600;
+    background-color: white;
+    color: #ff6600;
 }
 
 .TeacherPopup {
@@ -192,4 +198,12 @@ nav ul {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
+}
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 10px auto;
+    width: 50%;
 }
