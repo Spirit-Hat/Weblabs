@@ -64,7 +64,7 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 90px auto;
+    margin: 45px auto;
 
 }
 
@@ -91,12 +91,10 @@ nav ul {
     font-size: 16px;
     /*padding: 12px 20px 12px ;*/
     padding: 12px 20px 12px 10px;
-
     border: 1px solid #ff6600;
     background-color: white;
     color: #ff6600;
 }
-
 .TeacherPopup {
     position: fixed;
     width: 100%;
@@ -118,6 +116,7 @@ nav ul {
 .popup-content {
     background-color: #fff;
     width: 30%;
+    overflow: auto;
 }
 
 .popup-content h1 {
@@ -270,4 +269,104 @@ nav ul {
     text-align: center;
     padding: 0 50px;
 }
+.Statistics{
+    margin: 25px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Statistics h1{
+    margin-left: auto;
+    margin-right: auto;
+}
+.Statistics table{
+    margin: 40px 0;
+}
+.Statistics .StartTable table{
+    /*border-spacing: 0px;*/
+    width: 100%;
+    border-collapse: collapse;
+}
+.Statistics .StartTable thead{
+    border-bottom: 1px solid black;
+}
+.Statistics .StartTable table thead th{
+    font-size: 22px;
+    text-align: center;
+}
+.Statistics tr,td{
+    /*width: 25%;*/
+    width: calc(100% / 5 );
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 10px 0;
+}
+.Statistics .StartTable tbody tr:nth-child(odd) {
+}
 
+.Statistics .StartTable tr:nth-child(even) {
+    background-color: #f3ccf3;
+}
+
+footer{
+    margin: 30px auto;
+    width: 70%;
+}
+footer .FooterContent{
+    font-size: 24px;
+}
+footer .FooterContent p{
+    padding: 1px;
+    line-height: 1.5;
+}
+.fix{
+    opacity: 0;
+}
+
+
+.UserPopup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.78);
+    top: 0;
+    left: 0;
+    /*display: none;*/
+}
+
+.UserPopupBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    margin-top: 40px;
+}
+
+.UserContent {
+    background-color: #fff;
+    width: 30%;
+    overflow: auto;
+}
+
+.UserContent h1 {
+    font-size: 30px;
+    /*margin-bottom: 10px;*/
+    background-color: rgb(105, 101, 101);
+    color: white;
+    padding: 20px;
+}
+
+
+
+.UserContent .popupHeader H1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.UserContent .popupHeader H1 div:hover {
+    cursor: pointer;
+    color: #ff6600;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
