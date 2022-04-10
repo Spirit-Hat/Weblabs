@@ -13,6 +13,13 @@
     function closeForm() {
         document.getElementById("myForm").style.display = "none";
     }
+    function openForm2() {
+        document.getElementById("UserPopup").style.display = "block";
+    }
+
+    function closeForm2() {
+        document.getElementById("UserPopup").style.display = "none";
+    }
 </script>
 <body>
 <header>
@@ -20,7 +27,7 @@
         <h1>Teachinder</h1>
     </div>
     <div class="search">
-        <input type="text" placeholder="Name,note or age to search" required autocomplete="off">
+        <input type="text" id="find" placeholder="Name,note or age to search" required autocomplete="off">
         <a href="" class="search-btn">Search</a>
     </div>
 
@@ -71,7 +78,7 @@
     </form>
     <div class="Teacher">
         <div class="TeacherCard">
-            <a href="#">
+            <a href="#" onclick="openForm2()">
                 <img src="res/2.jpg" alt="Avatar" class="avatar">
             </a>
             <!--            <img src="res/1.png" alt="смайлик" >-->
@@ -160,7 +167,6 @@
                 Country
             </h4>
         </div>
-
     </div>
 </div>
 <div class="line"></div>
@@ -209,6 +215,13 @@
 
         </table>
 
+    </div>
+    <div class="pagination">
+        <a href="" class="active">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">...</a>
+        <a href="">Last</a>
     </div>
 
 </div>
@@ -401,15 +414,45 @@
     </div>
 </div>
 
-<div class="UserPopup" >
+<div class="UserPopup" id="UserPopup">
     <div class="UserPopupBody">
         <div class="UserContent">
-            <div class="popupHeader">
+            <div class="popupHeader2">
                 <h1>Teacher Info
-                    <div onclick="closeForm()">&#215;</div>
+                    <div onclick="closeForm2()">&#215;</div>
                 </h1>
             </div>
+            <div class="TeacherInfo">
+                <img src="res/2.jpg" alt="Avatar" class="avatar">
 
+                <div class="info">
+                    <h2 id="FIO">
+                        Ihor Tkachuk
+                    </h2>
+                    <h3 id="Speciality">
+                        Math
+                    </h3>
+                    <h4 id="country">
+                        Kyiv,Ukraine
+                    </h4>
+                    <h4 id="ag">
+                        30,Male
+                    </h4>
+                    <h4 id="emai">
+                        Test@gmail.com
+                    </h4>
+                    <h4 id="ph">
+                        +3809999232
+                    </h4>
+                </div>
+            </div>
+            <div class="TeacherComment">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, est eos dignissimos sunt
+                    molestiae omnis dicta fuga adipisci quasi accusantium unde rerum culpa voluptate eveniet
+                    facilis quidem quis eius. Porro?
+                </p>
+            </div>
         </div>
     </div>
 </div>

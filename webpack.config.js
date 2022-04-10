@@ -112,6 +112,7 @@ const CONFIG = {
     compress: true,
     port: 3001,
     hot: true,
+    // host: '192.168.0.231',
     watchContentBase: true,
     noInfo: true,
   },
