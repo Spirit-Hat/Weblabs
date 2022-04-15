@@ -1,3 +1,4 @@
+/* eslint-disable */
 
 $('document').ready(function (){
     let position = 0;
