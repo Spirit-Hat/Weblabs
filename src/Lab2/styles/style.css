@@ -285,7 +285,8 @@ nav ul li a:hover{
 }
 
 .TopTeachers .Teacher .TeacherCard img {
-    width: 100%;
+    width: 90%;
+    margin: 5%;
     /*height: 200px;*/
     border-radius: 50%;
 
