@@ -23,7 +23,7 @@ body {
 }
 
 header {
-    margin: 0px 20px;
+    margin: 0 20px;
     padding-top: 50px;
     display: flex;
     flex-direction: row;
@@ -62,13 +62,16 @@ header {
     background-color: white;
     color: #ff6600;
 }
-.search #find:hover{
+
+.search #find:hover {
     width: 325px;
 }
-.search-btn:hover{
+
+.search-btn:hover {
     background-color: #ff6600;
     color: #ffffff;
 }
+
 nav {
     display: flex;
     flex-direction: row;
@@ -90,15 +93,16 @@ nav ul {
 .navigation ul li a {
     color: #ff6600;
     font-size: 3vmin;
-    margin: 0px 10px;
+    margin: 0 10px;
     transition: 0.5s ease;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     -webkit-filter: brightness(75%);
 }
+
 .addTeacher {
-    margin: 0px 20px;
+    margin: 0 20px;
     width: 15%;
     font-size: 16px;
     /*padding: 12px 20px 12px ;*/
@@ -107,11 +111,13 @@ nav ul li a:hover{
     background-color: white;
     color: #ff6600;
 }
+
 .addTeacher:hover {
     background-color: #ff6600;
     color: #ffffff;
 }
-.TeacherPopup {
+
+.teacherPopup {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -201,6 +207,7 @@ nav ul li a:hover{
     background-color: white;
     color: #ff6600;
 }
+
 .popup-content form input[type=submit]:hover {
     background-color: #ff6600;
     color: #ffffff;
@@ -229,25 +236,25 @@ nav ul li a:hover{
     width: 50%;
 }
 
-.TopTeachers {
+.topTeachers {
     margin: 25px 0 25px;
     display: flex;
     flex-direction: column;
 }
 
-.TopTeachers h1 {
+.topTeachers h1 {
     margin-left: auto;
     margin-right: auto;
 }
 
-.TopTeachers form .line-vertical {
+.topTeachers form .line-vertical {
     border: 1px dashed grey;
     margin: 0 30px;
     /*flex: 1;*/
     align-self: stretch;
 }
 
-.TopTeachers form {
+.topTeachers form {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -257,44 +264,46 @@ nav ul li a:hover{
 
 }
 
-.TopTeachers form select {
+.topTeachers form select {
     width: 9%;
 }
 
-.TopTeachers form label {
+.topTeachers form label {
     font-size: 24px;
     margin: 0 15px;
 }
 
-.TopTeachers .Teacher {
+.topTeachers .teacher {
     /*display: flex;*/
     /*flex-wrap: wrap;*/
     /*flex-direction: row;*/
     /*justify-content: space-between;*/
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(264px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
     /*grid-template-columns: auto auto auto auto auto;*/
 }
 
 
-.TopTeachers .Teacher .TeacherCard {
+.topTeachers .teacher .teacherCard {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-.TopTeachers .Teacher .TeacherCard img {
+.topTeachers .teacher .teacherCard img {
     width: 90%;
     margin: 5%;
     /*height: 200px;*/
     border-radius: 50%;
 
 }
-.TopTeachers .Teacher .TeacherCard  h2,h3,h4 {
+
+.topTeachers .teacher .teacherCard h2, h3, h4 {
     text-align: center;
     padding: 0 50px;
 }
+
 /*.TopTeachers .Teacher .TeacherCard  h3,h4 {*/
 /*    text-align: center;*/
 /*    padding: 0 50px;*/
@@ -302,75 +311,87 @@ nav ul li a:hover{
 /*     text-align: center;*/
 /*     padding: 0 50px;*/
 /* }*/
-.Statistics{
+.statistics {
     margin: 25px 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.Statistics h1{
+
+.statistics h1 {
     margin-left: auto;
     margin-right: auto;
 }
-.Statistics table{
+
+.statistics table {
     margin: 40px 0;
 }
-.Statistics .StartTable table{
+
+.statistics .startTable table {
     /*border-spacing: 0px;*/
     width: 100%;
     border-collapse: collapse;
 }
-.Statistics .StartTable thead{
+
+.statistics .startTable thead {
     border-bottom: 1px solid black;
 }
-.Statistics .StartTable table thead th{
+
+.statistics .startTable table thead th {
     font-size: 22px;
     text-align: center;
 }
-.Statistics tr,td{
+
+.statistics tr, td {
     /*width: 25%;*/
-    width: calc(100% / 5 );
+    width: calc(100% / 5);
     font-size: 18px;
     text-align: center;
     padding: 10px 10px 0;
 }
-.Statistics .StartTable tbody tr:nth-child(odd) {
+
+.statistics .startTable tbody tr:nth-child(odd) {
 }
 
-.Statistics .StartTable tr:nth-child(even) {
+.statistics .startTable tr:nth-child(even) {
     background-color: #f3ccf3;
 }
-.Statistics  .pagination a{
+
+.statistics .pagination a {
     color: #8ba2b6;
     margin: 0 10px;
 }
-footer{
+
+footer {
     margin: 30px auto;
     width: 70%;
 }
-footer .FooterContent{
+
+footer .FooterContent {
     font-size: 24px;
 }
-footer .FooterContent p{
+
+footer .FooterContent p {
     padding: 1px;
     line-height: 1.5;
 }
-.fix{
+
+.fix {
     opacity: 0;
 }
 
 
-.UserPopup {
+.userPopup {
     position: fixed;
     width: 100%;
-     height: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.78);
     top: 0;
     left: 0;
     display: none;
 }
 
-.UserPopupBody {
+.userPopupBody {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -378,53 +399,60 @@ footer .FooterContent p{
     margin-top: 40px;
 }
 
-.UserContent {
+.userContent {
     background-color: #fff;
     width: 50%;
 }
 
-.UserContent .TeacherInfo{
-   display: flex;
+.userContent .teacherInfo {
+    display: flex;
     flex-direction: row;
 }
-.UserContent .TeacherInfo img{
+
+.userContent .teacherInfo img {
     width: 35%;
     margin: 1em;
 }
 
 
-.UserContent .TeacherInfo .info{
+.userContent .teacherInfo .info {
     margin: 1em;
     display: flex;
     flex-direction: column;
 }
-.UserContent .TeacherInfo .info h2,h3,h4 {
+
+.userContent .teacherInfo .info h2, h3, h4 {
     text-align: left;
     padding: 0;
 }
-.UserContent .TeacherInfo .info h2{
+
+.userContent .teacherInfo .info h2 {
     font-size: 40px;
     font-weight: 400;
     height: 35%;
 }
-.UserContent .TeacherInfo .info h3{
+
+.userContent .teacherInfo .info h3 {
     font-size: 25px;
     font-weight: 900;
     height: 32.5%;
 }
-.UserContent .TeacherInfo .info h4{
+
+.userContent .teacherInfo .info h4 {
     font-size: 16px;
     font-weight: 100;
     height: 32.5%;
 
 }
-.UserContent  .TeacherComment{
+
+.userContent .teacherComment {
     width: 95%;
     margin: 20px;
     font-size: 20px;
 
 }
-.UserContent h1 {
+
+.userContent h1 {
     font-size: 30px;
     /*margin-bottom: 10px;*/
     background-color: rgb(105, 101, 101);
@@ -432,86 +460,87 @@ footer .FooterContent p{
     padding: 20px;
 }
 
-.UserContent .popupHeader2 H1 {
+.userContent .popupHeader2 H1 {
     display: flex;
     justify-content: space-between;
 }
 
-.UserContent .popupHeader2 H1 div:hover {
+.userContent .popupHeader2 H1 div:hover {
     cursor: pointer;
     color: #ff6600;
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
 }
-.UserContent .TeacherInfo h2,h3,h4{
+
+.userContent .teacherInfo h2, h3, h4 {
     text-align: left;
     /*padding: 0 50px;*/
 }
 
- @media only screen and (-webkit-min-device-pixel-ratio: 1.25) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) {
 
-     .popupBody {
-         padding: 10px 10px;
-         margin-top: 10px;
-     }
+    .popupBody {
+        padding: 10px 10px;
+        margin-top: 10px;
+    }
 
-     .popup-content h1 {
-         font-size: 24px;
-     }
+    .popup-content h1 {
+        font-size: 24px;
+    }
 
-     .popup-content form {
-         padding: 10px;
-         font-size: 20px;
-     }
+    .popup-content form {
+        padding: 10px;
+        font-size: 20px;
+    }
 
-     .popup-content form input, select {
-         padding: 8px;
-         font-size: 14px;
-     }
+    .popup-content form input, select {
+        padding: 8px;
+        font-size: 14px;
+    }
 
-     .popup-content form div, label {
-         margin-top: 5px;
-     }
+    .popup-content form div, label {
+        margin-top: 5px;
+    }
 
-     .popup-content form .sex input {
-         width: 14px;
-         margin-right: 20px;
-     }
+    .popup-content form .sex input {
+        width: 14px;
+        margin-right: 20px;
+    }
 
-     .popup-content form input[type=color] {
-         padding: 0;
-         width: 10%;
-     }
+    .popup-content form input[type=color] {
+        padding: 0;
+        width: 10%;
+    }
 
-     .popup-content form textarea {
-         padding: 8px;
-         font-size: 18px;
-         width: 100%;
-         height: 80px;
-     }
-     .popup-content form input[type=submit] {
-         font-size: 24px;
-     }
+    .popup-content form textarea {
+        padding: 8px;
+        font-size: 18px;
+        width: 100%;
+        height: 80px;
+    }
+
+    .popup-content form input[type=submit] {
+        font-size: 24px;
+    }
 
 
+    .topTeachers form .line-vertical {
+        margin: 0 30px;
+    }
 
-     .TopTeachers form .line-vertical {
-         margin: 0 30px;
-     }
+    .topTeachers form {
+        margin: 40px 0 40px 0;
 
-     .TopTeachers form {
-         margin: 40px 0 40px 0;
+    }
 
-     }
+    .topTeachers form select {
+        width: 9%;
+    }
 
-     .TopTeachers form select {
-         width: 9%;
-     }
+    .topTeachers form label {
+        font-size: 20px;
+        margin: 0 15px;
+    }
 
-     .TopTeachers form label {
-         font-size: 20px;
-         margin: 0 15px;
-     }
-
- }
+}
