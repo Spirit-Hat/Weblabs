@@ -23,7 +23,8 @@ class drawUsers {
   constructor(listIDm, teachers) {
     this.teachers = teachers;
     this.teacherGallery = document.getElementById('teacher');
-    this.teacherGallery.appendChild(drawUsers.createCard(teachers[0]));
+    teachers.forEach((object) =>this.teacherGallery.appendChild(drawUsers.createCard(object)) )
+    // this.teacherGallery.appendChild(drawUsers.createCard(teacher));
     // this.teacherTableList = new TeacherTableList();
   };
 }
