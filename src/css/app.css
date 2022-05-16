@@ -285,14 +285,43 @@ nav ul li a:hover {
 }
 
 
-.topTeachers .teacher .teacherCard {
+.teacherCard {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    position: relative;
 }
+.star{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 34px;
+}
+.selected{
+    color:red;
+}
+.media-scroller-teachers {
+    padding: 15px 10px 5px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max(17vw, 100px);
+    grid-column-gap: 15px;
+    align-items: center;
 
-.topTeachers .teacher .teacherCard img {
+    overflow-x: auto;
+}
+/*.media-scroller-teachers {*/
+/*    padding: 15px 10px 5px;*/
+/*    display: grid;*/
+/*    grid-auto-flow: column;*/
+/*    grid-auto-columns: max(17vw, 100px);*/
+/*    grid-column-gap: 15px;*/
+/*    align-items: center;*/
+
+/*    overflow-x: auto;*/
+/*}*/
+.teacherCard img {
     width: 90%;
     margin: 5%;
     /*height: 200px;*/
@@ -300,7 +329,7 @@ nav ul li a:hover {
 
 }
 
-.topTeachers .teacher .teacherCard h2, h3, h4 {
+.teacherCard h2, h3, h4 {
     text-align: center;
     padding: 0 50px;
 }

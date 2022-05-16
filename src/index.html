@@ -3,24 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-<!--    <link rel="stylesheet" href="styles/style.css">-->
+    <script src="https://kit.fontawesome.com/88c44a0b03.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
+    <!--    <link rel="stylesheet" href="styles/style.css">-->
 </head>
-<script>
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-  }
-
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
-  function openForm2() {
-    document.getElementById("UserPopup").style.display = "block";
-  }
-
-  function closeForm2() {
-    document.getElementById("UserPopup").style.display = "none";
-  }
-</script>
 <body>
 <header>
     <div class="logo">
@@ -41,7 +29,7 @@
             <li><a href="#">About</a></li>
         </ul>
     </div>
-    <button class="addTeacher" onclick="openForm()">Add Teacher</button>
+    <button class="addTeacher">Add Teacher</button>
     <!--        <div class="TeacherPopup" id="myForm">-->
     <!--            <span>SomeText</span>-->
     <!--        </div>-->
@@ -76,95 +64,10 @@
         <div class="line-vertical"></div>
 
     </form>
-    <div class="teacher" id="teacher">
-        <div class="teacherCard">
-            <img src="../res/2.jpg" alt="Avatar" class="avatar">
-            <h2>
-                First Name Last Name
-            </h2>
-            <h3>
-                Speciality
-            </h3>
-            <h4>
-                Country
-            </h4>
-        </div>
-        <!--        <div class="teacherCard">-->
-        <!--            <a href="#">-->
-        <!--                <img src="../res/2.jpg" alt="Avatar" class="avatar">-->
-        <!--            </a>-->
-        <!--            &lt;!&ndash;            <img src="res/1.png" alt="смайлик" >&ndash;&gt;-->
-        <!--            <h2>-->
-        <!--                First Name Last Name-->
-        <!--            </h2>-->
-        <!--            <h3>-->
-        <!--                Speciality-->
-        <!--            </h3>-->
-        <!--            <h4>-->
-        <!--                Country-->
-        <!--            </h4>-->
-        <!--        </div>-->
-        <!--        <div class="teacherCard">-->
-        <!--            <a href="#">-->
-        <!--                <img src="../res/2.jpg" alt="Avatar" class="avatar">-->
-        <!--            </a>-->
-        <!--            &lt;!&ndash;            <img src="res/1.png" alt="смайлик" >&ndash;&gt;-->
-        <!--            <h2>-->
-        <!--                First Name Last Name-->
-        <!--            </h2>-->
-        <!--            <h3>-->
-        <!--                Speciality-->
-        <!--            </h3>-->
-        <!--            <h4>-->
-        <!--                Country-->
-        <!--            </h4>-->
-        <!--        </div>-->
-        <!--        <div class="teacherCard">-->
-        <!--            <a href="#">-->
-        <!--                <img src="../res/2.jpg" alt="Avatar" class="avatar">-->
-        <!--            </a>-->
-        <!--            &lt;!&ndash;            <img src="res/1.png" alt="смайлик" >&ndash;&gt;-->
-        <!--            <h2>-->
-        <!--                First Name Last Name-->
-        <!--            </h2>-->
-        <!--            <h3>-->
-        <!--                Speciality-->
-        <!--            </h3>-->
-        <!--            <h4>-->
-        <!--                Country-->
-        <!--            </h4>-->
-        <!--        </div>-->
-        <!--        <div class="teacherCard">-->
-        <!--            <a href="#">-->
-        <!--                <img src="../res/2.jpg" alt="Avatar" class="avatar">-->
-        <!--            </a>-->
-        <!--            &lt;!&ndash;            <img src="res/1.png" alt="смайлик" >&ndash;&gt;-->
-        <!--            <h2>-->
-        <!--                First Name Last Name-->
-        <!--            </h2>-->
-        <!--            <h3>-->
-        <!--                Speciality-->
-        <!--            </h3>-->
-        <!--            <h4>-->
-        <!--                Country-->
-        <!--            </h4>-->
-        <!--        </div>-->
-        <!--        <div class="teacherCard">-->
-        <!--            <a href="#">-->
-        <!--                <img src="../res/2.jpg" alt="Avatar" class="avatar">-->
-        <!--            </a>-->
-        <!--            &lt;!&ndash;            <img src="res/1.png" alt="смайлик" >&ndash;&gt;-->
-        <!--            <h2>-->
-        <!--                First Name Last Name-->
-        <!--            </h2>-->
-        <!--            <h3>-->
-        <!--                Speciality-->
-        <!--            </h3>-->
-        <!--            <h4>-->
-        <!--                Country-->
-        <!--            </h4>-->
-        <!--        </div>-->
+    <div id="teachers">
+
     </div>
+</div>
 </div>
 <div class="line"></div>
 <div class="statistics">
@@ -172,34 +75,19 @@
     <div class="startTable">
         <table>
             <thead>
-            <th>Name</th>
-            <th>Speciality</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Nationality</th>
+            <th class="col user-dont-select" data-order='desc' data-column="name" title="Sort By name">Name</th>
+            <th class="col user-dont-select" data-order='desc' data-column="specialty"
+                title="Sort By specialty">Specialty
+            </th>
+            <th class="col user-dont-select" data-order='desc' data-column="age" title="Sort By age">Age</th>
+            <th class="col user-dont-select" data-order='desc' data-column="gender" title="Sort By gender">
+                Gender
+            </th>
+            <th class="col user-dont-select" data-order='desc' data-column="country" title="Sort By country">
+                Country
+            </th>
             </thead>
-            <tbody>
-            <tr>
-                <td>Daisy</td>
-                <td>Chemistry</td>
-                <td>28</td>
-                <td>Female</td>
-                <td>Usa</td>
-            </tr>
-            <tr>
-                <td>Daisy</td>
-                <td>Chemistry</td>
-                <td>28</td>
-                <td>Female</td>
-                <td>Usa</td>
-            </tr>
-            <tr>
-                <td>Daisy</td>
-                <td>Chemistry</td>
-                <td>28</td>
-                <td>Female</td>
-                <td>Usa</td>
-            </tr>
+            <tbody id="table-statistic-body">
             <tr>
                 <td>Daisy</td>
                 <td>Chemistry</td>
@@ -225,83 +113,7 @@
 <div class="line"></div>
 <div class="topTeachers">
     <h1>Favorite</h1>
-    <div class="teacher">
-        <div class="teacherCard">
-            <a href="#">
-                <img src="../res/2.jpg" alt="Avatar" class="avatar">
-            </a>
-            <!--            <img src="res/1.png" alt="смайлик" >-->
-            <h2>
-                First Name Last Name
-            </h2>
-            <h3>
-                Speciality
-            </h3>
-            <h4>
-                Country
-            </h4>
-        </div>
-        <div class="teacherCard">
-            <a href="#">
-                <img src="../res/2.jpg" alt="Avatar" class="avatar">
-            </a>
-            <!--            <img src="res/1.png" alt="смайлик" >-->
-            <h2>
-                First Name Last Name
-            </h2>
-            <h3>
-                Speciality
-            </h3>
-            <h4>
-                Country
-            </h4>
-        </div>
-        <div class="teacherCard">
-            <a href="#">
-                <img src="../res/2.jpg" alt="Avatar" class="avatar">
-            </a>
-            <!--            <img src="res/1.png" alt="смайлик" >-->
-            <h2>
-                First Name Last Name
-            </h2>
-            <h3>
-                Speciality
-            </h3>
-            <h4>
-                Country
-            </h4>
-        </div>
-        <div class="teacherCard">
-            <a href="#">
-                <img src="../res/2.jpg" alt="Avatar" class="avatar">
-            </a>
-            <!--            <img src="res/1.png" alt="смайлик" >-->
-            <h2>
-                First Name Last Name
-            </h2>
-            <h3>
-                Speciality
-            </h3>
-            <h4>
-                Country
-            </h4>
-        </div>
-        <div class="teacherCard">
-            <a href="#">
-                <img src="../res/2.jpg" alt="Avatar" class="avatar">
-            </a>
-            <!--            <img src="res/1.png" alt="смайлик" >-->
-            <h2>
-                First Name Last Name
-            </h2>
-            <h3>
-                Speciality
-            </h3>
-            <h4>
-                Country
-            </h4>
-        </div>
-
+        <div class="media-scroller-teachers" id="media">
     </div>
 </div>
 <div class="line"></div>
@@ -343,17 +155,17 @@
         <div class="popup-content">
             <div class="popupHeader">
                 <h1>Add teacher
-                    <div onclick="closeForm()">&#215;</div>
+                    <div class="closeForm">&#215;</div>
                 </h1>
             </div>
-            <form>
+            <form name="addTeacher">
                 <div>
                     <label for="FirstName">Name</label><br>
-                    <input type="text" placeholder="Enter First Name" id="FirstName" required autocomplete="off">
+                    <input type="text" placeholder="Enter First Name" id="FirstName" name="firstname" required autocomplete="off">
                 </div>
                 <div>
                     <label for="spec">Speciality</label><br>
-                    <select id="spec">
+                    <select id="spec" name="specialty">
                         <option value="math">Math</option>
                         <option value="art">Art</option>
                         <option value="literature">Literature</option>
@@ -367,25 +179,25 @@
                 <div class="sheet">
                     <div>
                         <label for="fcountry">Country:</label><br>
-                        <input type="text" id="fcountry" name="fcountry"><br>
+                        <input type="text" id="fcountry" name="country"><br>
                     </div>
 
                     <div>
                         <label for="fcity">City:</label><br>
-                        <input type="text" id="fcity" name="fcity"><br>
+                        <input type="text" id="fcity" name="city"><br>
                     </div>
                     <div>
                         <label for="email">Email</label><br>
-                        <input type="text" placeholder="Enter Email" id="email" required autocomplete="off"><br>
+                        <input type="text" placeholder="Enter Email" id="email" name="email" required autocomplete="off"><br>
                     </div>
                     <div>
                         <label for="phone">Phone</label><br>
-                        <input type="tel" id="phone" required autocomplete="off"><br>
+                        <input type="tel" id="phone" name="phone" required autocomplete="off"><br>
                     </div>
                 </div>
                 <div>
                     <label for="birthday">Date of birthday</label><br>
-                    <input type="date" id="birthday" required autocomplete="off"><br>
+                    <input type="date" id="birthday" name="birthday" required autocomplete="off"><br>
                 </div>
                 <div class="sex">
                     <label>Gender</label><br>
@@ -416,12 +228,12 @@
         <div class="userContent">
             <div class="popupHeader2">
                 <h1>Teacher Info
-                    <div onclick="closeForm2()">&#215;</div>
+                    <div id="ifavorite">&#9733;</div>
+                    <div id="closeUser">&#215;</div>
                 </h1>
             </div>
-            <div class="teacherInfo">
+            <div class="teacherInfo" id ="teacherInfo">
                 <img src="../res/2.jpg" alt="Avatar" class="avatar">
-
                 <div class="info">
                     <h2 id="FIO">
                         Ihor Tkachuk

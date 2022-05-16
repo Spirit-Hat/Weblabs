@@ -1,40 +1,103 @@
 /* eslint-disable */
 
 ////Task 1 Lab3
+const getField = (obj, ...date) => date.reduce((el, level) => el && el[level], obj);
 
 
-function createUser(user, index) {
+// function createUser(user, index) {
+//     const getSpecialty = () => {
+//         const courseList = ['Mathematics', 'Physics', 'English', 'Computer Science',
+//             'Dancing', 'Chess', 'Biology', 'Chemistry', 'Law', 'Art', 'Medicine', 'Statistics'];
+//         return courseList[Math.floor(Math.random() * courseList.length)]
+//     }
+//     const getColor = () => {
+//         const courseList = ['red', 'blue', 'olive', 'yellow',
+//             'gray', 'white', 'maroon', 'purple', 'navy', 'aquamarine'];
+//         return courseList[Math.floor(Math.random() * courseList.length)]
+//     }
+//     const get = (...date) => {
+//         const res = getField(user, ...date);
+//         return res && typeof res !== 'object' ? res : null;
+//
+//     }
+//
+//     const id = `${user.id.name || ''}${user.id.value  || ''}`;
+//     const firstname = get('name', 'first') || get("name") || '';
+//     const lastname = get('name', 'last') || get("lastname") || '';
+//     const full_name = firstname + " " + lastname;
+//     // const full_name = `${user.name.first|| ''} ${user.name.last || ''}`.trim();
+//     return {
+//         id: id || `id${1 + index}`,
+//         gender: user.gender,
+//         full_name: user.full_name || full_name,
+//         course: user.corse  || getSpecialty(),
+//         bg_color: user.color || getColor(),
+//         country:user.location.country,
+//         city: user.location.city,
+//         state: user.location.state,
+//         postcode: user.postcode|| user.location.postcode,
+//         email: user.email,
+//         phone: user.phone,
+//         age: user.age || user.dob.age,
+//         birthday: user.age || user.dob.age,
+//         picture_large: user.picture.large,
+//         picture_medium: user.picture.medium,
+//         favorite: false,
+//         note: null,
+//     }
+// }
+function createUser(user, index, form = false) {
+    let birthday = "";
+    let age = "";
+    let idForm = "";
+    const get = (...date) => {
+        const res = getField(user, ...date);
+        return res && typeof res !== 'object' ? res : null;
+
+    }
+
     const getSpecialty = () => {
         const courseList = ['Mathematics', 'Physics', 'English', 'Computer Science',
             'Dancing', 'Chess', 'Biology', 'Chemistry', 'Law', 'Art', 'Medicine', 'Statistics'];
-        return courseList[Math.floor(Math.random() * courseList.length)]
-    }
-    const getColor = () => {
-        const courseList = ['red', 'blue', 'olive', 'yellow',
-            'gray', 'white', 'maroon', 'purple', 'navy', 'aquamarine'];
-        return courseList[Math.floor(Math.random() * courseList.length)]
-    }
+        return courseList[Math.floor(Math.random() * courseList.length)]    }
 
-    const id = `${user.id.name || ''}${user.id.value  || ''}`;
-    const full_name = `${user.name.first|| ''} ${user.name.last || ''}`.trim();
+    const id = get('id') || `${get('id', 'name') || ''}${get('id', 'value') || ''}`;
+
+    const firstname = get('name', 'first') || get("firstname") || '';
+    const lastname = get('name', 'last') || get("lastname") || '';
+    const full_name = firstname + " " + lastname;
+
+    const location = `${get('location', 'country') || get('country' || "")}, ${get('location', 'city') || get('city') || ""}`.trim();
+    if (!form) {
+        birthday = new Date(user.fyear, user.fmonth, user.fday);
+        age = new Date().getFullYear() - user.fyear;
+        idForm = `FORM${index}`;
+    }
     return {
-        id: id || `id${1 + index}`,
-        gender: user.gender,
-        full_name: user.full_name || full_name,
-        course: user.corse  || getSpecialty(),
-        bg_color: user.color || getColor(),
-        country:user.location.country,
-        city: user.location.city,
-        state: user.location.state,
-        postcode: user.postcode|| user.location.postcode,
-        email: user.email,
-        phone: user.phone,
-        age: user.age || user.dob.age,
-        birthday: user.age || user.dob.age,
-        picture_large: user.picture.large,
-        picture_medium: user.picture.medium,
+        id: id || idForm || `NEW${1000 + index}`,
+        gender: get('gender'),
+        full_name: get('full_name') || full_name,
+        firstname: firstname,
+        lastname: lastname,
+        // state: get('state') || get('location', 'state'),
+        country: get('location', 'country') || get('country' || ""),
+        city: get('location', 'city') || get('city') || "",
+        // location: get('location') || location,
+        postcode: get('postcode') || get('location', 'postcode') || null,
+
+        email: get('email'),
+        phone: get('phone'),
+
+        age: get('age') || get('dob', 'age') || age,
+        birthday: get('birthday') || get('dob', 'date') || birthday,
+        picture_large: get('picture_large') || get('picture', 'large') || null,
+        specialty: get('specialty') || getSpecialty(),
+
+        latitude: get('latitude') || get('location', 'coordinates', 'latitude') || '',
+        longitude: get('longitude') || get('location', 'coordinates', 'longitude') || '',
+        isPhoto: !!get('picture', 'large'),
         favorite: false,
-        note: null,
+        note: get("note") || null,
     }
 }
 
@@ -111,6 +174,7 @@ function getPercent(arrayObjects, field, arg) {
 module.exports = {
     userFormatting: userCreation,
     ValidationUser,
+    createUser,
     task3: filtration,
     task4: sortingUser,
     task5: FindUser,
