@@ -8,15 +8,17 @@ class Search {
     }
 
     constructor() {
-        this.searchData = document.forms.searchTeachers;
+        this.searchData = document.getElementById("serchvalue");
+
         this.searchForm = document.getElementById("searchForm");
     }
 
     start(callback) {
-        this.searchForm.onsubmit = (event) => {
-            const result = Search.onSubmit(this.searchData, event);
+        this.searchForm.onclick = (event) => {
+            event.preventDefault()
+            const result = this.searchData.value
             callback && callback(result);
-            this.searchForm.reset();
+            // this.searchForm.reset();
         };
     }
 }

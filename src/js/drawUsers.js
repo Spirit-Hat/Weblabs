@@ -3,6 +3,8 @@ const Popup = require('./Popup.js');
 const teacherFavList = require('./teacherFavoriteList')
 const Process = require('./process.js');
 const TeacherTableList = require('./teacherTable');
+const {SearchUser} = require('./userOperate');
+
 
 class drawUsers {
   static userCard(teacherCard, teacher) {
@@ -98,6 +100,32 @@ class drawUsers {
       });
     }
     return teacherList;
+  }
+  clear() {
+    if (this.teacherList && this.teacherGallery.firstChild === this.teacherList) {
+      this.teacherGallery.removeChild(this.teacherList);
+    } else if (this.teacherlistFiltered && this.teacherGallery.firstChild === this.teacherlistFiltered) {
+      this.teacherGallery.removeChild(this.teacherlistFiltered);
+    }
+  }
+
+  applySearchElements(opts = {}) {
+    if (!Object.keys(opts).length) {
+      this.resetFilterElements();
+      this.teacherlistFiltered = [];
+    } else {
+      const teachersSearched = SearchUser(this.teachers, opts);
+      console.log(teachersSearched);
+      this.teacherlistFiltered = this.createTeacherList(teachersSearched);
+      this.teacherGallery.innerHTML = ""
+      this.teacherGallery.appendChild(this.teacherlistFiltered);
+
+    }
+  }
+
+  resetFilterElements() {
+    this.clear();
+    this.teacherList.firstChild && this.teacherGallery.appendChild(this.teacherList);
   }
   constructor(listIDm, teachers) {
     this.teacherList = null;

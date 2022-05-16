@@ -102,7 +102,23 @@ function createUser(user, index, form = false) {
 }
 
 function userCreation(user_mock) {
-    return user_mock.map(createUser);
+    let list = user_mock.map(createUser);
+
+    const uniqueOption = (list) => {
+        const result = []
+        const optionsRegion = document.getElementById("select-region");
+
+        for (let obj of list) {
+            if (!result.includes(obj.country)) {
+                result.push(obj.country);
+                optionsRegion.append(new Option(obj.country, obj.country));
+
+            }
+        }
+    }
+
+    uniqueOption(list)
+    return list;
 }
 
 ///////Task2 lab 3

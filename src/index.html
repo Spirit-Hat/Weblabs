@@ -15,8 +15,8 @@
         <h1>Teachinder</h1>
     </div>
     <div class="search">
-        <input type="text" id="find" placeholder="Name,note or age to search" required autocomplete="off">
-        <a href="" class="search-btn">Search</a>
+        <input type="text" id="serchvalue"placeholder="Name,note or age to search" required autocomplete="off">
+        <a href="" id="searchForm" class="search-btn">Search</a>
     </div>
 
 </header>
@@ -37,32 +37,75 @@
 <div class="line"></div>
 <div class="topTeachers">
     <h1>Top Teachers</h1>
-    <form>
-        <label for="age">Age</label>
-        <select id="age">
-            <option value="age">18-31</option>
-        </select>
-        <div class="line-vertical"></div>
-        <label for="Region">Europe</label>
-        <select id="Region">
-            <option value="Europe">Europe</option>
-        </select>
-        <div class="line-vertical"></div>
+<!--    <form>-->
+<!--        <label for="age">Age</label>-->
+<!--        <select id="age">-->
+<!--            <option value="age">18-31</option>-->
+<!--        </select>-->
+<!--        <div class="line-vertical"></div>-->
+<!--        <label for="Region">Europe</label>-->
+<!--        <select id="Region">-->
+<!--            <option value="Europe">Europe</option>-->
+<!--        </select>-->
+<!--        <div class="line-vertical"></div>-->
 
-        <label for="Gender">Gender</label>
-        <select id="Gender">
-            <option value="male">Male</option>
-        </select>
-        <div class="line-vertical"></div>
+<!--        <label for="Gender">Gender</label>-->
+<!--        <select id="Gender">-->
+<!--            <option value="male">Male</option>-->
+<!--        </select>-->
+<!--        <div class="line-vertical"></div>-->
 
-        <label for="WithPhoto">Only with photo</label>
-        <input type="checkbox" id="WithPhoto">
-        <div class="line-vertical"></div>
+<!--        <label for="WithPhoto">Only with photo</label>-->
+<!--        <input type="checkbox" id="WithPhoto">-->
+<!--        <div class="line-vertical"></div>-->
 
-        <label for="OnlyFavorite">Only Favorites</label>
-        <input type="checkbox" id="OnlyFavorite">
-        <div class="line-vertical"></div>
+<!--        <label for="OnlyFavorite">Only Favorites</label>-->
+<!--        <input type="checkbox" id="OnlyFavorite">-->
+<!--        <div class="line-vertical"></div>-->
 
+<!--    </form>-->
+    <form class="filter-menu" id="filterForm">
+        <div class="filter-left-block">
+            <ul>
+                <li><div class="filter-menu-buttons">
+                    <label for="select-age">Age:
+                        <label for="select-age">Age:
+                            <input id="select-age" type="number" name="age" max="70" min="18">
+                        </label>
+                    </label>
+                </div></li>
+                <li> <div class="filter-menu-buttons" id="filter-region">
+                    <label for="select-gender">Region:
+                        <select id="select-region" name="country">
+                            <option value="not_specify" selected>
+                            </option>
+                        </select>
+                    </label>
+                </div></li>
+                <li> <div class="filter-menu-buttons">
+                    <label for="select-gender">Sex:
+                        <select id="select-gender" name="gender">
+                            <option value="not_specify" selected>
+                            </option>
+                            <option value="male">
+                                Male
+                            </option>
+                            <option value="female">
+                                Female
+                            </option>
+                        </select>
+                    </label>
+                </div></li>
+                <li><div class="filter-menu-buttons">
+                    <input type="checkbox" id="check-photo" name="isPhoto">
+                    <label for="check-photo">Only with photo</label>
+                </div></li>
+                <li> <div class="filter-menu-buttons">
+                    <input type="checkbox" id="check-favorites" name="favorite">
+                    <label for="check-favorites">Only favorites</label>
+                </div></li>
+            </ul>
+        </div>
     </form>
     <div id="teachers">
 
