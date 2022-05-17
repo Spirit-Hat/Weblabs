@@ -90,7 +90,7 @@ function createUser(user, index, form = false) {
 
         age: get('age') || get('dob', 'age') || age,
         birthday: get('birthday') || get('dob', 'date') || birthday,
-        picture_large: get('picture_large') || get('picture', 'large') || null,
+        picture_large: get('picture_large') || get('picture', 'large') || "../res/2.jpg",
         specialty: get('specialty') || getSpecialty(),
 
         latitude: get('latitude') || get('location', 'coordinates', 'latitude') || '',

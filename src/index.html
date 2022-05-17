@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Title</title>
+
     <script src="https://kit.fontawesome.com/88c44a0b03.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
+<!--    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"-->
+<!--          integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="-->
+<!--          crossorigin=""/>-->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+            integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+            crossorigin=""></script>
 
     <!--    <link rel="stylesheet" href="styles/style.css">-->
 </head>
+
 <body>
 <header>
     <div class="logo">
@@ -37,79 +45,92 @@
 <div class="line"></div>
 <div class="topTeachers">
     <h1>Top Teachers</h1>
-<!--    <form>-->
-<!--        <label for="age">Age</label>-->
-<!--        <select id="age">-->
-<!--            <option value="age">18-31</option>-->
-<!--        </select>-->
-<!--        <div class="line-vertical"></div>-->
-<!--        <label for="Region">Europe</label>-->
-<!--        <select id="Region">-->
-<!--            <option value="Europe">Europe</option>-->
-<!--        </select>-->
-<!--        <div class="line-vertical"></div>-->
+    <form id="filterForm">
+        <label for="select-age">Age:
+            <input id="select-age" type="number" name="age" max="70" min="18">
+        </label>
+        <div class="line-vertical"></div>
+        <label for="select-region">Region:
+            <select id="select-region" name="country">
+                <option value="not_specify" selected>
+                </option>
+            </select>
+        </label>
+        <div class="line-vertical"></div>
+        <label for="select-gender">Sex:
+            <select id="select-gender" name="gender">
+                <option value="not_specify" selected>
+                </option>
+                <option value="male">
+                    Male
+                </option>
+                <option value="female">
+                    Female
+                </option>
+            </select>
+        </label>
 
-<!--        <label for="Gender">Gender</label>-->
-<!--        <select id="Gender">-->
-<!--            <option value="male">Male</option>-->
-<!--        </select>-->
-<!--        <div class="line-vertical"></div>-->
+        <div class="line-vertical"></div>
 
-<!--        <label for="WithPhoto">Only with photo</label>-->
-<!--        <input type="checkbox" id="WithPhoto">-->
-<!--        <div class="line-vertical"></div>-->
-
-<!--        <label for="OnlyFavorite">Only Favorites</label>-->
-<!--        <input type="checkbox" id="OnlyFavorite">-->
-<!--        <div class="line-vertical"></div>-->
-
-<!--    </form>-->
-    <form class="filter-menu" id="filterForm">
-        <div class="filter-left-block">
-            <ul>
-                <li><div class="filter-menu-buttons">
-                    <label for="select-age">Age:
-                        <label for="select-age">Age:
-                            <input id="select-age" type="number" name="age" max="70" min="18">
-                        </label>
-                    </label>
-                </div></li>
-                <li> <div class="filter-menu-buttons" id="filter-region">
-                    <label for="select-gender">Region:
-                        <select id="select-region" name="country">
-                            <option value="not_specify" selected>
-                            </option>
-                        </select>
-                    </label>
-                </div></li>
-                <li> <div class="filter-menu-buttons">
-                    <label for="select-gender">Sex:
-                        <select id="select-gender" name="gender">
-                            <option value="not_specify" selected>
-                            </option>
-                            <option value="male">
-                                Male
-                            </option>
-                            <option value="female">
-                                Female
-                            </option>
-                        </select>
-                    </label>
-                </div></li>
-                <li><div class="filter-menu-buttons">
-                    <input type="checkbox" id="check-photo" name="isPhoto">
-                    <label for="check-photo">Only with photo</label>
-                </div></li>
-                <li> <div class="filter-menu-buttons">
-                    <input type="checkbox" id="check-favorites" name="favorite">
-                    <label for="check-favorites">Only favorites</label>
-                </div></li>
-            </ul>
+        <div class="filter-menu-buttons">
+            <input type="checkbox" id="check-photo" name="isPhoto">
+            <label for="check-photo">Only with photo</label>
         </div>
+        <div class="filter-menu-buttons">
+            <input type="checkbox" id="check-favorites" name="favorite">
+            <label for="check-favorites">Only favorites</label>
+        </div>
+
     </form>
+<!--    <form class="filter-menu" id="filterForm">-->
+<!--        <div class="filter-left-block">-->
+<!--            <ul>-->
+<!--                <li><div class="filter-menu-buttons">-->
+<!--                    <label for="select-age">Age:-->
+<!--                        <label for="select-age">Age:-->
+<!--                            <input id="select-age" type="number" name="age" max="70" min="18">-->
+<!--                        </label>-->
+<!--                    </label>-->
+<!--                </div></li>-->
+<!--                <li> <div class="filter-menu-buttons" id="filter-region">-->
+<!--                    <label for="select-gender">Region:-->
+<!--                        <select id="select-region" name="country">-->
+<!--                            <option value="not_specify" selected>-->
+<!--                            </option>-->
+<!--                        </select>-->
+<!--                    </label>-->
+<!--                </div></li>-->
+<!--                <li> <div class="filter-menu-buttons">-->
+<!--                    <label for="select-gender">Sex:-->
+<!--                        <select id="select-gender" name="gender">-->
+<!--                            <option value="not_specify" selected>-->
+<!--                            </option>-->
+<!--                            <option value="male">-->
+<!--                                Male-->
+<!--                            </option>-->
+<!--                            <option value="female">-->
+<!--                                Female-->
+<!--                            </option>-->
+<!--                        </select>-->
+<!--                    </label>-->
+<!--                </div></li>-->
+<!--                <li><div class="filter-menu-buttons">-->
+<!--                    <input type="checkbox" id="check-photo" name="isPhoto">-->
+<!--                    <label for="check-photo">Only with photo</label>-->
+<!--                </div></li>-->
+<!--                <li> <div class="filter-menu-buttons">-->
+<!--                    <input type="checkbox" id="check-favorites" name="favorite">-->
+<!--                    <label for="check-favorites">Only favorites</label>-->
+<!--                </div></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </form>-->
     <div id="teachers">
 
     </div>
+    <button class="loadMorebtn button redColor" id="loadMore">
+        Load More
+    </button>
 </div>
 </div>
 <div class="line"></div>
@@ -177,6 +198,10 @@
             similique perspiciatis suscipit porro natus, odio aperiam
             eum sapiente? Dignissimos, cumque minima?</p>
     </div>
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    <div id="map"></div>
+
+
 </footer>
 <nav>
     <div class="navigation">
@@ -305,6 +330,13 @@
                     facilis quidem quis eius. Porro?
                 </p>
             </div>
+            <div class="toggleMap">
+                <div>
+                    <button class="button" id="map-btn">Toggle map</button>
+                </div>
+                <div id="map-content"></div>
+            </div>
+
         </div>
     </div>
 </div>

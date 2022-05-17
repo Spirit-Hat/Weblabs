@@ -21,6 +21,7 @@ class FilterTeachers {
 
     constructor() {
         this.filerForm = document.getElementById("filterForm");
+        console.log(this.filerForm)
         this.input = this.filerForm.querySelectorAll('input[type="checkbox"]');
         this.selector = this.filerForm.querySelectorAll('select');
         this.input_n = this.filerForm.querySelectorAll('input[type="number"]');

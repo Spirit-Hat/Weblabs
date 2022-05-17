@@ -41,6 +41,24 @@ class drawUsers {
   //   // this.teacherTableList.setupPage(this.teacherTableList.page.current);
   //
   // };
+  activeMore(onClickMore) {
+    this.loadMoreBtn.addEventListener('click', async () => {
+      this.loadMoreBtn.classList.add('active');
+      onClickMore()
+        .then((res) => {
+          this.loadMoreBtn.classList.remove('active');
+          if (!res.ok) {
+            this.loadMoreBtn.classList.add('not_work');
+            this.loadMoreBtn.setAttribute("disabled", "");
+          }
+        });
+    });
+  }
+  addTeachers(teachers) {
+    teachers.forEach((teacher) => this.add(teacher));
+    this.resetFilterElements();
+    this.teacherlistFiltered = [];
+  }
   add(teacherDate) {
     const teacher = Process.createUser(teacherDate, this.teachers.length + 1, true);
     const teacherCard = drawUsers.createCard(teacher);
@@ -137,6 +155,7 @@ class drawUsers {
     this.popup = new Popup();
     this.teacherFavList = new teacherFavList();
     this.teacherTableList = new TeacherTableList();
+    this.loadMoreBtn = document.getElementById("loadMore");
 
     this.setStarpPage();
 
