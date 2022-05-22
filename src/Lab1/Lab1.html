@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h1>Register form </h1>
+    <hr>
+    <label for="FirstName"><b>Enter First Name</b></label><br>
+    <input type="text" placeholder="Enter First Name"  id="FirstName" required autocomplete="off">
+    <br>
+    <label for="LastName"><b>Enter Last Name</b></label><br>
+    <input type="text" placeholder="Enter Last Name"  id="LastName" required autocomplete="off">
+    <br>
+
+    <input type="radio" id="men" name="gender"value="Men">
+    <label for="men">Men</label>
+    <input type="radio" id="women" name="gender" value="women">
+    <label for="women">Women</label><br>
+
+    <label for="birthday"><b>Date of birthday</b></label><br>
+    <input type="date" id="birthday" required autocomplete="off"><br>
+
+
+    <label for="email"><b>Email</b></label><br>
+    <input type="text" placeholder="Enter Email" id="email" required autocomplete="off"><br>
+
+    <label for="phone"><b>Phone</b></label><br>
+    <input type="tel" id="phone" required autocomplete="off"><br>
+
+    <label for="color"><b>Chose color</b></label><br>
+    <input list="color">
+    <datalist id="color">
+        <option value="red">
+        <option value="blue">
+        <option value="grey">
+        <option value="purple">
+        <option value="orange">
+    </datalist><br>
+
+    <label for="fcountry">Country:</label><br>
+    <input type="text" id="fcountry" name="fcountry"><br>
+
+    <label for="fcity">City:</label><br>
+    <input type="text" id="fcity" name="fcity"><br>
+
+    <label for="fmessage">Message:</label><br>
+    <textarea name="message" id="fmessage" rows="10" cols="10"></textarea>
+    <br><br>
+
+    <button>Register </button>
+</form>
+
+</body>
+</html>
